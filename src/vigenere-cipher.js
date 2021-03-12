@@ -16,7 +16,7 @@ class VigenereCipheringMachine {
   getKeyNumbers(key, msgNumbers) {
     this.keyNumbers = this.convertToNumber(key);
 
-    if (this.keyNumbers.length < msgNumbers.length) {
+    while (this.keyNumbers.length < msgNumbers.length) {
       this.keyNumbers = [...this.keyNumbers, ...this.keyNumbers];
     }
 
